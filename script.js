@@ -20,6 +20,15 @@ function finishQuiz() {
     window.location.href = 'result.html';
 }
 
+// Função para reiniciar o quiz e limpar as respostas armazenadas
+function reiniciarQuiz() {
+    // Limpar todas as respostas salvas no localStorage
+    localStorage.clear();  // Limpa todo o armazenamento local
+
+    // Opcional: Redireciona para a primeira página do quiz
+    window.location.href = "index.html";  // Redireciona para a página inicial
+}
+
 window.onload = function () {
     if (window.location.pathname.includes('result.html')) {
         let score = 0;
